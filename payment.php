@@ -1,9 +1,16 @@
+<?php 
+
+session_start();
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Payment</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -53,22 +60,27 @@
           </div>
         </div>
       </nav>
-      
-    <!--Contact-->
-    <section id="contact" class="container my-5 py-5">
-        <div class="container text-center mt-5">
-            <h3>Contact Us</h3>
-            <hr class="mx-auto">
-            <p class="w-50 mx-auto">
-                Call Us: <span>0987654321</span>
-            </p>
-            <p class="w-50 mx-auto">
-                Email Us: <span>admin@bicol-u.edu.ph</span>
-            <p class="w-50 mx-auto">
-                At your service!
-            </p>
+
+
+    <!--Payment-->
+    <section class="my-5 py-5">
+        <div class="container text-center mt-3 pt-5">
+            <h2 class="form-weight-bold">Payment</h2>
+            <hr class="checkout-hr mx-auto">
+        </div>
+        <div class="mx-auto container text-center">
+            <p><?php echo $_GET['order_status'];?></p>
+            <p>Total payment: Php<?php echo $_SESSION['total'];?></p>
+            <input class="btn btn-primary" type="submit" value="Pay Now"/>
+            
         </div>
     </section>
+
+
+
+
+
+
 
       <!--Footer-->
       <footer class="mt-5 py-5">
@@ -134,10 +146,8 @@
             </div>
         </div>
         </footer>
-    
-
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
-</html>
+</html>    
